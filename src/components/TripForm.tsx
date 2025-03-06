@@ -68,7 +68,7 @@ const TripForm: React.FC<TripFormProps> = ({ onSubmit }) => {
     setError(null);
     try {
       const response = await axios.post<TripResponse>(
-        "http://localhost:8000/api/plan-trip/",
+        "https://spotter-backend-test.onrender.com/api/plan-trip/",
         formData
       );
       onSubmit(response.data);
